@@ -1,0 +1,44 @@
+<!--<h2>My Photos</h2>
+<ul class="photos">
+  <li *ngFor="let photo of photo">
+    <span class="badge">{{photo.id}}</span> {{photo.name}}
+  </li>
+</ul>
+
+-->
+<div>
+    <div>
+        <div class='row'>
+            <div>Filter by:</div>
+            <div>
+                <input type='text' />
+                <button>Search</button>
+            </div>
+            
+        </div>
+        <div class='row'>
+            <div class='col-md-6'>
+                <h4>Filtered By: </h4>
+            </div>
+        </div>
+    </div>    
+    <div>
+        <table class='table'
+                *ngIf='photo && photo.length'>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let photo of photo'>
+                    <td>{{photo.id}}</td>
+                    <td>{{photo.name}}</td>
+                </tr>    
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
